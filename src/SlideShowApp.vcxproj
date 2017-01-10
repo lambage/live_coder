@@ -112,7 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\AppImageSource.cpp" />
-    <ClCompile Include="..\src\CinderProjectApp.cpp" />
+    <ClCompile Include="SlideShowApp.cpp" />
     <ClCompile Include="..\src\LiveCodingShader.cpp" />
     <ClCompile Include="..\src\LiveFile.cpp" />
     <ClCompile Include="..\src\TextureDirectory.cpp" />

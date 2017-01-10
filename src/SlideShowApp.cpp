@@ -8,7 +8,7 @@
 using namespace ci;
 using namespace ci::app;
 
-class CinderProjectApp : public App {
+class SlideShowApp : public App {
   public:
 	void setup() override;
     void keyDown(KeyEvent event) override;
@@ -20,7 +20,7 @@ private:
     std::unique_ptr<AppImageSource> image_source = nullptr;
 };
 
-void CinderProjectApp::setup()
+void SlideShowApp::setup()
 {
     image_source = std::make_unique<AppImageSource>("C:/Users/klamb/Pictures/");
 
@@ -34,7 +34,7 @@ void CinderProjectApp::setup()
 
 }
 
-void CinderProjectApp::keyDown(KeyEvent event)
+void SlideShowApp::keyDown(KeyEvent event)
 {
     if (event.getChar() == KeyEvent::KEY_ESCAPE)
     {
@@ -54,16 +54,16 @@ void CinderProjectApp::keyDown(KeyEvent event)
     }
 }
 
-void CinderProjectApp::mouseDown( MouseEvent event )
+void SlideShowApp::mouseDown( MouseEvent event )
 {
 }
 
-void CinderProjectApp::update()
+void SlideShowApp::update()
 {
     image_source->Update();
 }
 
-void CinderProjectApp::draw()
+void SlideShowApp::draw()
 {
 	gl::clear( Color( 0, 0, 0 ) ); 
 
@@ -73,4 +73,4 @@ void CinderProjectApp::draw()
     }
 }
 
-CINDER_APP( CinderProjectApp, RendererGl )
+CINDER_APP( SlideShowApp, RendererGl )
