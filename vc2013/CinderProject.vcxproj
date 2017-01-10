@@ -124,6 +124,7 @@
     <ClInclude Include="..\src\LiveCodingShader.h" />
     <ClInclude Include="..\src\LiveFile.h" />
     <ClInclude Include="..\src\PimpPtr.hpp" />
+    <ClInclude Include="..\src\System.hpp" />
     <ClInclude Include="..\src\TextureDirectory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

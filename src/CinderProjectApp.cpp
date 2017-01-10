@@ -2,6 +2,7 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Utilities.h"
+#include "cinder/Json.h"
 #include "AppImageSource.h"
 
 using namespace ci;
@@ -22,6 +23,15 @@ private:
 void CinderProjectApp::setup()
 {
     image_source = std::make_unique<AppImageSource>("C:/Users/klamb/Pictures/");
+
+    auto settings_json = getAssetPath("settings.json").string();
+    JsonTree json(loadFile(settings_json));
+
+    auto& system = json["system"];
+
+    auto width = system["width"].getValue<int>();
+    auto height = system["height"].getValue<int>();
+
 }
 
 void CinderProjectApp::keyDown(KeyEvent event)
