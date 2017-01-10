@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CinderProject", "CinderProject.vcxproj", "{E6001F3F-1910-4903-B453-8A49BCEB484F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SlideShowApp", "SlideShowApp.vcxproj", "{E6001F3F-1910-4903-B453-8A49BCEB484F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
