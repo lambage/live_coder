@@ -1,4 +1,5 @@
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -18,14 +19,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -105,14 +106,25 @@
   <ItemGroup>
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup />
   <ItemGroup>
+    <None Include="..\assets\fragment.glsl" />
+    <None Include="..\assets\vertex.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AppImageSource.cpp" />
     <ClCompile Include="..\src\CinderProjectApp.cpp" />
+    <ClCompile Include="..\src\LiveCodingShader.cpp" />
+    <ClCompile Include="..\src\LiveFile.cpp" />
+    <ClCompile Include="..\src\TextureDirectory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="..\blocks\OpenCV3\include\CinderOpenCV.h" />
+    <ClInclude Include="..\src\AppImageSource.h" />
+    <ClInclude Include="..\src\LiveCodingShader.h" />
+    <ClInclude Include="..\src\LiveFile.h" />
+    <ClInclude Include="..\src\PimpPtr.hpp" />
+    <ClInclude Include="..\src\TextureDirectory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
