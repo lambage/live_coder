@@ -25,6 +25,9 @@
     <Filter Include="assets">
       <UniqueIdentifier>{401ef0e7-b606-45ed-bb34-1cc54f05d964}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Settings">
+      <UniqueIdentifier>{efd62400-4f59-44bc-9873-93e3ab847f0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -48,6 +51,9 @@
     <ClCompile Include="SlideShowApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClInclude Include="Settings\System.hpp">
+      <Filter>Header Files\Settings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -66,9 +72,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\LiveFile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\System.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

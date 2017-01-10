@@ -211,8 +211,8 @@
     <ClInclude Include="..\src\LiveCodingShader.h" />
     <ClInclude Include="..\src\LiveFile.h" />
     <ClInclude Include="..\src\PimpPtr.hpp" />
-    <ClInclude Include="..\src\System.hpp" />
     <ClInclude Include="..\src\TextureDirectory.h" />
+    <ClInclude Include="Settings\System.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
