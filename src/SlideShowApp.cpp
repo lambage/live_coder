@@ -31,7 +31,6 @@ void SlideShowApp::setup()
 
     auto width = system["width"].getValue<int>();
     auto height = system["height"].getValue<int>();
-
 }
 
 void SlideShowApp::keyDown(KeyEvent event)
