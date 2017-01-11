@@ -22,12 +22,12 @@ private:
     void ProcessSettingsFile(LiveFile * settings_file);
 
     ci::CameraOrtho m_camera;
-    ci::gl::BatchRef mRect;
+    ci::gl::BatchRef m_rect;
 
     LiveCodingShaderRef m_live_shader;
     TextureDirectoryRef m_texture_directory;
 
-    ci::Font mFont;
+    ci::Font m_font;
 
     std::unique_ptr<::Settings::Settings> m_settings;
     std::unique_ptr<LiveFile> m_settings_file;

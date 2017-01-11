@@ -24,12 +24,12 @@ bool IsSettingsNew(T* settings, T* old_settings)
 SlideShow::SlideShow()
 {
     m_camera.setOrtho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
-    mFont = Font("Times New Roman", 24);
+    m_font = Font("Times New Roman", 24);
 
     m_live_shader = LiveCodingShaderMaker()
         .FragmentShader(fragment_shader_filename)
         .VertexShader(vertex_shader_filename)
-        .OnUpdatedHandler([this]() { mRect = CreateDrawingRectangle(m_live_shader.get()); })
+        .OnUpdatedHandler([this]() { m_rect = CreateDrawingRectangle(m_live_shader.get()); })
         .Create();
 
     m_settings_file = std::make_unique<LiveFile>(app::getAssetPath(slide_show_settings_filename));
@@ -72,13 +72,13 @@ void SlideShow::Render() const
     gl::ScopedViewport scopedViewport(ivec2(0), window_size);
 
     gl::setMatrices(m_camera);
-    if (mRect && m_live_shader && m_texture_directory)
+    if (m_rect && m_live_shader && m_texture_directory)
     {
         auto glsl = m_live_shader->GetProgram();
 
         m_texture_directory->Bind(glsl, 0, 1);
 
-        mRect->draw();
+        m_rect->draw();
     }
 
     auto shader_error = m_live_shader->GetErrorString();
@@ -87,7 +87,7 @@ void SlideShow::Render() const
         auto color = ColorA(1.0f, 0.15f, 0.15f, 1.0f);
 
         gl::setMatricesWindow(app::getWindowSize());
-        gl::drawString(shader_error, vec2(0.0f, 0.0f), color, mFont);
+        gl::drawString(shader_error, vec2(0.0f, 0.0f), color, m_font);
     }
 }
 
