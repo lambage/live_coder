@@ -36,9 +36,6 @@
     <ClInclude Include="..\blocks\OpenCV3\include\CinderOpenCV.h">
       <Filter>Blocks\OpenCV3\include</Filter>
     </ClInclude>
-    <ClCompile Include="..\src\AppImageSource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\LiveCodingShader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,12 +51,21 @@
     <ClInclude Include="Settings\System.hpp">
       <Filter>Header Files\Settings</Filter>
     </ClInclude>
+    <ClInclude Include="Settings\DataImports.hpp">
+      <Filter>Header Files\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings\SlideShow.hpp">
+      <Filter>Header Files\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings\Settings.hpp">
+      <Filter>Header Files\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="SlideShow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\AppImageSource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\LiveCodingShader.h">
@@ -87,5 +93,10 @@
     <None Include="..\assets\vertex.glsl">
       <Filter>assets</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SlideShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

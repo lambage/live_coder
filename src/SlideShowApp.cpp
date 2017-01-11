@@ -3,7 +3,7 @@
 #include "cinder/gl/gl.h"
 #include "cinder/Utilities.h"
 #include "cinder/Json.h"
-#include "AppImageSource.h"
+#include "SlideShow.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -17,20 +17,14 @@ class SlideShowApp : public App {
 	void draw() override;
 
 private:
-    std::unique_ptr<AppImageSource> image_source = nullptr;
+    std::unique_ptr<SlideShow> m_slide_show;
 };
+
+
 
 void SlideShowApp::setup()
 {
-    image_source = std::make_unique<AppImageSource>("C:/Users/klamb/Pictures/");
-
-    auto settings_json = getAssetPath("settings.json").string();
-    JsonTree json(loadFile(settings_json));
-
-    auto& system = json["system"];
-
-    auto width = system["width"].getValue<int>();
-    auto height = system["height"].getValue<int>();
+    m_slide_show = std::make_unique<SlideShow>();
 }
 
 void SlideShowApp::keyDown(KeyEvent event)
@@ -41,11 +35,11 @@ void SlideShowApp::keyDown(KeyEvent event)
     }
     else if (event.getCode() == KeyEvent::KEY_RIGHT)
     {
-        image_source->Next();
+        m_slide_show->Next();
     }
     else if (event.getCode() == KeyEvent::KEY_LEFT)
     {
-        image_source->Previous();
+        m_slide_show->Previous();
     }
     else if (event.getCode() == KeyEvent::KEY_F1)
     {
@@ -59,16 +53,19 @@ void SlideShowApp::mouseDown( MouseEvent event )
 
 void SlideShowApp::update()
 {
-    image_source->Update();
+    if (m_slide_show != nullptr)
+    {
+        m_slide_show->Update();
+    }
 }
 
 void SlideShowApp::draw()
 {
 	gl::clear( Color( 0, 0, 0 ) ); 
 
-    if (image_source != nullptr)
+    if (m_slide_show != nullptr)
     {
-        image_source->Render();
+        m_slide_show->Render();
     }
 }
 

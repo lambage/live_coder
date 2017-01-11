@@ -198,7 +198,7 @@
     <None Include="..\assets\vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\AppImageSource.cpp" />
+    <ClCompile Include="SlideShow.cpp" />
     <ClCompile Include="SlideShowApp.cpp" />
     <ClCompile Include="..\src\LiveCodingShader.cpp" />
     <ClCompile Include="..\src\LiveFile.cpp" />
@@ -207,12 +207,15 @@
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="..\blocks\OpenCV3\include\CinderOpenCV.h" />
-    <ClInclude Include="..\src\AppImageSource.h" />
     <ClInclude Include="..\src\LiveCodingShader.h" />
     <ClInclude Include="..\src\LiveFile.h" />
     <ClInclude Include="..\src\PimpPtr.hpp" />
     <ClInclude Include="..\src\TextureDirectory.h" />
+    <ClInclude Include="Settings\DataImports.hpp" />
+    <ClInclude Include="Settings\Settings.hpp" />
+    <ClInclude Include="Settings\SlideShow.hpp" />
     <ClInclude Include="Settings\System.hpp" />
+    <ClInclude Include="SlideShow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

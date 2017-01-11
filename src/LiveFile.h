@@ -8,7 +8,7 @@ struct LiveFile
     LiveFile& operator=(LiveFile&& other) noexcept;
     LiveFile(LiveFile&& other) noexcept;
 
-    ~LiveFile() = default;
+    ~LiveFile() {};
 
     bool IsExpired() const;
     void Reset();
